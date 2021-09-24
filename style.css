@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+* {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0 auto;
+  background: linear-gradient(76.85deg, #9055ff 26.26%, #4be1ec 96.03%);
+  font-family: "Roboto", sans-serif;
+  max-width: 1200px;
+}
+
+.container {
+  padding: 64px;
+  background: #ecf4ff;
+  color: #1c1c1d;
+  border-radius: 20px;
+  margin: 80px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+}
+
+.perfil {
+  display: flex;
+}
+
+.perfil-foto {
+  max-height: 160px;
+  border-radius: 460px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.titulo {
+  margin-left: 20px;
+  h1 {
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 0px;
+  }
+  h3 {
+    font-weight: 400;
+    font-size: 24px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+.tema button {
+  align-self: flex-end;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 6px 12px;
+  background: #fcfcfc;
+  border: 3px solid #1c1c1c;
+  border-radius: 100px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.icones-perfil {
+  margin: 3px;
+  font-size: 30px;
+  text-decoration: none;
+  color: linear-gradient(87.85deg, #4be1ec 6.26%, #9055ff 6.03%);
+  transition: color 0.2s;
+  :hover {
+    color: #4be1ec;
+  }
+}
+
+.projetos {
+  margin-top: 20px;
+  padding: 40px;
+  max-height: 350px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background: linear-gradient(76.85deg, #9055ff 26.26%, #4be1ec 96.03%);
+  a {
+    font-size: 1.1em;
+    color: #fcfcfc;
+    font-weight: 500;
+  }
+  a:hover {
+    color: #000;
+    font-weight: 500;
+  }
+  h2 {
+    font-size: 1.5em;
+    color: #fcfcfc;
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
+  p {
+    font-size: 1.1em;
+    color: #fcfcfc;
+    margin-bottom: 10px;
+    margin-top: 40px;
+  }
+}
+
+.dark {
+  background: linear-gradient(76.85deg, #000066 26.26%, #6699ff 96.03%);
+}
+.dark .projetos {
+  background: linear-gradient(76.85deg, #000066 26.26%, #6699ff 96.03%);
+}
+.dark .container {
+  background: #333439;
+  color: #fcfcfc;
+}
+.dark .icones-perfil {
+  color: #6699ff;
+}
+.dark .tema button {
+  background: #1c1c1c;
+  color: #fcfcfc;
+  border: 3px solid #fcfcfc;
+}
+
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 100px;
+  height: 50px;
+  background: #333439;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: #4be1ec;
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 90px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1c1c1c;
+  border: 1.8px solid #1c1c1c;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ecf4ff;
+}
+
+::-webkit-scrollbar-track {
+  background: #ecf4ff;
+  border-radius: 100px;
+  box-shadow: inset 0px 0px 0px 0px #f0f0f0;
+  margin: 15px 0px;
+}
